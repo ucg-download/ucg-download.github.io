@@ -1,0 +1,100 @@
+v 1.0:
+	-Released for beta testing.
+v 1.1:
+	-Increased box collider size for cubes (to make them easier to tap).
+	-Added "tip" text at the bottom of the main menu.
+	-Fixed damage value on Cube1 asset (was positive).
+v 1.2:
+	-Completely redesigned learn page.
+	-Made game more compatible with varying resolutions (well, tried anyway. Still needs to be tested).
+	-Added more main menu tips.
+	-Moved some UI elements around.
+	-Got rid of the year tag.
+	-Made tips randomly generate whenever returning from the learn screen.
+	-Changed name from Popcube to Pop! Cube
+	-Added a highscore feature. Each difficulty has its own highscore value.
+	-Changed placement and scale of health bar.
+v 1.3:
+	-Fixed being able to pause during the game over screen.
+	-Tweaked NewHighScoreIdle animation.
+	-Made the screen flash red when taking damage.
+	-Again tried optimizing for different resolutions.
+	-Made the shield cube material slightly lighter to differentiate between other cubes.
+	-Changed icon.
+v 1.4:
+	-Added sounds and music.
+	-Added an options screen to give settings information to control of the player (primarily for manipulation of sounds and music).
+	-Used Unity's Canvas Scaler to optimize UI for different resolutions. Game SHOULD support all 16:9 resolutions.
+	-Added setting to allow user to choose whether or not to allow pausing on Toddler difficulty (because kids just use all fingers, all the time)
+v 1.5:
+	-Added options screen access to the Pause menu while playing the game.
+	-Got rid of the score and highscore UI elements when on Toddler mode.
+	-Added a new page to the learn section. You can now learn about the different HUD elements.
+	-Added a UI element during the game that displays the current difficulty when the game is paused, or over.
+	-Added a credits screen.
+v 1.6:
+	-Released on Google Play Store
+v 1.7:
+	-Fixed materials rendering as flat black on some devices.
+v 2.0:
+	-VAST internal improvements.
+	-Improved animations.
+	-Changed the click sound.
+	-General audio improvements.
+	-You now see what a cube contributed to your health or score when it falls off the screen.
+	It's shown by a +{Insert Value} at the bottom of the screen at the same horizontal position
+	the cube had when it fell off the bottom of the screen.
+	-Changed the size of some UI elements.
+	-Changed the game's font to something more fun.
+	-Changed some menus' layouts.
+	-Added a combo counter (and it's really fancy).
+		-Touching green, blue, and special cubes progresses your combo, while touching ANY red cubes (yes,
+		even bombs), ends your combo, and gives you some feedback based on how far you got in your combo. 
+	-The Pause button has been changed. You can no longer pause the game by tapping the screen with three fingers.
+	Instead, press the Menu button on your phone.
+	-You can now close the app by pressing your phone's back button. Be cautious, though! This will not suspend the
+	app, it will end it. It will still show up if you hold your Home key, but clicking on it from there will put
+	you back at the intro. You'll lose all unsaved data. Also, 
+	
+	VERY IMPORTANT, IF YOU READ NOTHING ELSE, READ THIS: DO NOT press your phone's back button in the moments after
+	the game over screen appears, or after clicking the Main Menu button in the Pause screen. These are times when
+	the game now saves your Highscore data. Your data could become corrupt and unusable if you close the app at one
+	of these points, which means you would have to uninstall the app and reinstall it. It doesn't take long to save,
+	just don't go tapping the back button like crazy immediately in the aforementioned situations.
+
+	-Speaking of that, you can now save your highscore without having to lose the current round. Just pause the game
+	and return to the main menu by clicking the Main Menu button on the Pause screen. We understand you have to stop
+	playing sometimes, but you got a really sweet highscore that you don't want to lose. We compromised.
+	-Glowing Red cubes (Bombs) now work slightly differently. They will now hurt you very slightly (5 points of damage
+	on Normal difficulty), so you'll have to be wiser when using them!
+	-Black cubes now cause the screen to flash black if they damage you.
+	-Score, healing, shielding, and damage values have been changed for just about every cube. They still follow the 
+	basic rules of the cubes, though, which are:
+		
+		-Greens heal you a little and give you a little score, but hurt you a little if they fall.
+		-Blues give you a lot of score, but hurt you a lot if you let them fall.
+		-Reds hurt you if you tap them, but they now also reward you for letting them fall by giving you score when
+		they fall off the screen.
+		-Glowing Red cubes blow up and destroy all cubes around them as though you had touched them. These cubes also
+		now reward you with score when you tap on them.
+		-All special cubes function the same as they did before, though the shield bonus given by Silver cubes has
+		been buffed.
+
+	-You can no longer drag your finger along groups of cubes to destroy them, you must lift your finger after every
+	hit, and you can only tap one cube at a time. Yeah, it SOUNDS lame, but trust us, it makes the game much more
+	challenging and fun. It was far too easy before.
+
+	In short, we redid the whole game. We re-wrote 95% of the code, redid the organization (slimming the game's files
+	down quite a bit), and sought to make everything far neater so that we could add more cool stuff more easily.
+	So give it a go and go touch some cubes!
+v 2.1
+	-Added a confirmation prompt when the user goes to quit the game by pressing the back button on their phone. Helps stop
+	the user from accidentally quitting the game during play. That sucks!
+	-Added the ability to continue playing the current round after a game over if the user chooses to view an ad.
+	-Added multi-launguage support. Supported languages are: English, French, and Spanish.
+v 2.2
+	-The highest combo of the round is now shown at the Game Over screen
+	-The game now saves the number of ads you watched to attain your highscore. This number appears between parentheses after your highscore amount. (A ? means that you 	got the highscore before v2.2)
+	-Now if you download the game for the first time, the language will default to your phone's language if it's supported
+	-The "Language" button on the Main Menu now looks like Earth
+	-Pause the game by tapping with 3 fingers

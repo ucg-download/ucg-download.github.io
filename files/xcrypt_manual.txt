@@ -1,0 +1,208 @@
+TABLE OF CONTENTS
+-----------------
+1. Purpose of Xcrypt
+2. Xcrypt's Files and Directories
+3. Commands
+4. Acceptable Character in Passwords
+5. How Xcrypt Works
+
+1. PURPOSE OF XCRYPT
+--------------------
+Xcrypt is lightweight encryption software. The only thing you need to start
+using Xcrypt is the executable! Xcrypt will create all other necessary files
+and directories on its first launch, but even after that it is still very
+minimalistic. You could easily carry Xcrypt around on a flashdrive and
+barely notice it's there!
+
+Xcrypt is meant to be compatible with any PC and it's to meet that end that
+it runs in the console. Xcrypt's commands are powerful, easy to type and easy, 
+to use, allowing you to spend less time typing and more time securing your files.
+
+Xcrypt was written and developed by Joshua Truitt, and he holds the copyright
+for Xcrypt. Any attempt to redistribute Xcrypt or altered version of it in channels
+not expressly approved by Joshua Truitt can result in legal action. By using Xcrypt,
+you indicate that you agree to not redistribute Xcrypt unless you've received the
+express consent of Joshua Truitt.
+
+Thank you for using Xcrypt and I hope you really enjoy it :)
+
+2. XCRYPT'S FILES AND DIRECTORIES
+---------------------------------
+When Xcrypt launches for the first time, it will make the following directories:
+	Data\: This directory holds data related to Xcrypt, like the prefs.dat file
+	for Xcrypt.
+	
+	Data\EncryptionKeys: This is where all your encryption keys are stored. On
+	first launch, Xcrypt will also generate a default key. Also, if you use
+	Xcrypt to generate an encryption key, it will be placed here. For more
+	information on this, look below.
+	
+	Output\: This directory holds two directories: Encryptions\ and Decryptions\.
+	This is for your convenience. To stop you from having to type out long full
+	paths to where you want your encryptions/decryptions to go once their finished,
+	they will go to one of these two directories. If you would like to put them
+	elsewhere, you can simply cut and paste the files from the relevant directory
+	and put it into the desired one.
+
+	User\: This directory is for you. This directory holds the Docs\ directory.
+	This gives you an easy place right next to Xcrypt to put your documents.
+	
+	User\Docs: This directory is meant to hold your document originals. It's
+	meant to give you an easy path to pull documents from. For example, when
+	prompted for the path of your file to encrypt, it's much easier to type
+	"user\docs\my_document.txt" than it is to type 
+	"C:\users\xxx\documents\my_document.txt".
+
+Xcrypt also creates some files. Here are the files Xcrypt creates:
+	Data\prefs.dat: This holds the data for Xcrypt's alterable settings. Xcrypt
+	does not use an XML file for its settings. If you would like to change any
+	of the alterable settings in Xcrypt, please do so with the Settings
+	command while using Xcrypt.
+
+	Data\EncryptionKeys\default.txt: This is the default encryption key for Xcrypt.
+	This key is generated on first launch and IT IS UNIQUE TO YOU. There is no
+	standard encryption key for Xcrypt, as that would not be very secure. If you
+	notice, encryption keys are just text files. This allows you to manually go in
+	and change the values if you are unhappy with the randomness of the key, or
+	perhaps just want a more customized key. HOWEVER, the values assigned to each
+	character must be between 0 and 255. This is an internal requirement of Xcrypt
+	and I cannot guarantee that Xcrypt will work properly if you insert bad data
+	into the encryption keys.
+
+3. COMMANDS
+-----------
+Xcrypt features many powerful commands with multiple ways of executing them to make sure
+that everyone has a way that they like. Beside each command, you'll find all valid ways
+to use the command within parentheses, separated by commas. For ease of reading, each
+of these feature camel notation, but this is not necessary. Commands in Xcrypt are not
+case-sensitive. Also, you'll find a semi-colon after each command followed by a number.
+Each command in Xcrypt has an "action code" associate with it. You may also enter the
+action code of the corresponding command in Xcrypt's command line to call the command.
+These action codes represent the fastest way to type the commands, though some may find
+them difficult to memorize them and may prefer using the shorthand versions of the command
+instead.
+PLEASE NOTE: Though commands are not case-sensitive in Xcrypt, all other entries are. 
+That means file names, passwords, etc.
+ANOTHER NOTE (as of v1.1): You may enter "stop" (not case-sensitive) as the argument for
+any block that asks you to enter an argument to leave that command's flow and go back to
+the mode that allows you to enter a new command.
+	Encrypt a file (Encrypt, En) ; 0: Encrypts a file. Once you press return, Xcrypt
+	will guide you through the necessary steps to encrypt a file. Xcrypt will place
+	the resulting encryption in the Output\Encryptions directory. Encrypting a file
+	does not destroy the original.
+	
+	Decrypt a file (Decrypt, De) ; 1: Decrypts a file that was encrypted with Xcrypt.
+	To ensure a proper decryption, you must use the same key and password that were
+	used to encrypt the file. Otherwise, the decrypted version will still be encrypted,
+	and it may end up being more encrypted than it originally was. Xcrypt will place
+	the resulting decryption in the Output\Decryptions directory. Decrypting a file
+	does not destroy the original.
+
+	Create an encryption key (CreateEncryptionKey, CreateKey, Ck) ; 2: Creates a single
+	encryption key. Once you press return, Xcrypt will guide you through the necessary
+	steps to creating an encryption key. Keys are randomly generated and no two keys
+	are exactly the same. The keys generated by Xcrypt are put in the
+	Data\EncryptionKeys directory.
+
+	Open a file (OpenFile, Open, O) ; 3: Opens any file. Although this is intended to
+	be used to open files relevant to your encrypting/decrypting activities, you can
+	really open any file you would like. Any file opened in this manner will be launched
+	with the default application you have set for that file type.
+	
+	Encrypt a directory's contents (EncryptDirectory, EncryptDir, EnDir) ; 4: Encrypts
+	the files in a directory. You will also have the choice to encrypt all files in all
+	sudirectories of this directory, as well. Like the normal Encrypt command, the result
+	will be placed in the Output\Encryptions directory. However, with this option, Xcrypt
+	will exactly recreate the directories found in the directory you specify. So, if you
+	choose to encrypt all files in your documents folder by giving this path:
+	C:\users\xxx\documents
+	Xcrypt will perfectly replicate the directory structure of its target in the output.
+	So, you'll find your encrypted files in
+	Output\Encryptions\documents
+
+	Decrypt a directory's contents (DecryptDirectory, DecryptDir, DeDir) ; 5: Works like
+	the above command, but for decrypting.
+	
+	Create multiple encryption keys (CreateXEncryptionKeys, CreateEncryptionKeys,
+	CreateKeys, Cxk, Cks) ; 6: You can use this command to create more than one 
+	encryption key at once. This can be very useful, as you can instruct Xcrypt to
+	create 100 keys, then you choose the one that you would like to use in your
+	encrypting/decrypting. This ensures that people have no idea which key you
+	would have used. However, because of the multitude of keys that can be generated in
+	this fasion, these keys cannot be given names. Xcrypt will iterate through all the
+	keys and name the files "keyI.txt" where I is the count of the key. So, the first key
+	generated will be called "key0.txt", the second will be called "key1.txt", etc. However,
+	you are free to change the names of these files if you would like.
+
+	PLEASE NOTE: Because of the way random numbers are generated by computers, the Cks command
+	has an internal delay on it between file creations. This delay is extremely slight, but in
+	case you noticed that Xcrypt may take a little while to create 1000 keys, it's not because
+	Xcrypt or your hardware is slow, it's because a delay is necessary to ensure that no two
+	keys are exactly the same.
+
+	Change Xcrypt's alterable settings (Settings, S) ; 98: Xcrypt has some alterable settings.
+	With this command, you can change them. This is the only way to change them safely. Using
+	this command will also tell you what each setting is currently set to.
+
+	Help (Help, H) ; 99: This will give the shorthand of all valid commands in Xcrypt and a very
+	short description of what they do. This is meant to be a quick reference in case you forget
+	a command.
+
+	Quit Xcrypt (Quit, Exit, Q, E) ; 100: This will ensure that Xcrypt closes properly. For example,
+	if you have the Remove Decryptions On Quit setting set to true, Xcrypt will only clear the
+	decryptions directory if you quit by using this command.
+
+4. Acceptable Character in Passwords
+------------------------------------
+In Xcrypt, many, but not all, characters are available for use in your passwords. Legal characters
+include all upper and lowercase letters in the latin alphabet as well as many accented vowels. Most
+symbols found on a standard American QWERTY keyboard are also available, as well as the numbers found
+in the Hindu-Arabic numeral system. This large variety ensures that you have many options for making
+your passwords as complex and varied as possible. Look below for a list of all the acceptable characters.
+	Letters (including uppercase counterparts):
+		aàâáäbcçdeéèëêfghiíìïîjklmnoòóöôpqrstuúùüûvwxyz
+	Symbols:
+		`~!@#$%^&*()-_+[{]}\\|;:'\",<.>/?
+
+		Please note that the = sign is NOT legal.
+	Numbers:
+		1234567890
+
+5. How Xcrypt Works
+-------------------
+Xcrypt can encrypt any file by directly manipulating the bytes of the file. This process essentially makes
+a corrupt copy of the file, which means you likely won't be able to open the resulting encryption. 
+However, if you would like to visually see an encryption,
+try encrypting a text file. Because of the way data is saved and read by a simple word editor like Notepad,
+it will just report all the bytes that it reads. This will give you very interesting and fun-to-look at
+results after an encryption!
+
+Xcrypt encrypts by accepting a case-sensitive password from the user and referencing a unique encryption
+key to determine how each individual character in the password interacts with the bytes of the file.
+So, the longer and more varied your password, the more complex the encryption. This also gives two layers
+of security: to decrypt your file, you must use both the EXACT password used to encrypt it as well as the
+EXACT encryption key used.
+
+Xcrypt DOES NOT in any way store the passwords or encryption keys used on files. There is absolutely
+no trace of this information after you encrypt/decrypt a file. This ensures that no one data mining
+could find any clue about what you've used. So, if your encryption keys directory is filled with
+5000 keys and you only use one, no one has any way of knowing which key you've used. However, because
+Xcrypt does not store any of this information, that means that it is up to the user to remember these
+things. If you encrypt a file and forget or lose the key you used, or forget the password, then the
+file cannot by decrypted by Xcrypt. Keep your keys and passwords safe! I reccommend backing up all
+your keys to ensure that, if your keys are deleted, you don't lose the ones you used for important
+encryptions.
+
+When Xcrypt encrypts, it does NOT delete the original. It also does NOT delete the original when
+decrypting. Feel free to delete the original and replace it with the encrypted version if you'd like,
+but Xcrypt will not do this. I, Joshua Truitt, am also not responsible for any damage you or anyone else
+does to your system using Xcrypt. I strongly advise against using Xcrypt on your OS files and then 
+replacing them with their encrypted counterparts. By using Xcrypt, you agree that I am not responsible
+for any damage you or your system sustains while using Xcrypt.
+
+AS OF V1.1
+Encryption works slightly differently. The speed of the algorithm has been improved by what I can determine
+to be about 30%. In addition to that, with the ability to specify the strength of the encryption, you can
+encrypt thhings very quickly. Note that with even a Weak strength encryption, the file will likely be 
+encrypted well enough that it will not be able to be opened, ensuring no one can have any sort of idea 
+what the contents were. This does not apply to text documents, as they behave differently.
